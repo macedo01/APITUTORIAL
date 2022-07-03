@@ -22,6 +22,7 @@ body{
   align-items: center;
   justify-content: center;
   gap: 30px;
+  position: relative;
 }
 
 .separation{
@@ -35,4 +36,36 @@ label{
 
 button{
   padding: 10px;
+}
+
+.panel{
+  background-color: #444 ;
+  position: absolute;
+  height: 80%;
+  width: 70%;
+  opacity: 0%;
+  display: none;
+  transition: ease-in 1s;
+}
+
+.panel.active{
+  transition: ease-in-out 1s;
+  opacity: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.iconClose{
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+}
+
+.name{
+  position: absolute;
+  top: 80px;
 }
